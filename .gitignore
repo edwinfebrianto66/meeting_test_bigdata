@@ -17,10 +17,6 @@ __pycache__/
 vendor/
 *.log
 
-# Dataset
-data/
-*/data/
-
 # VSCode / IDE
 .vscode/
 .idea/
