@@ -8,7 +8,7 @@ Benchmark performa pengolahan dataset besar (1.000.000 baris CSV) menggunakan 4 
 
 ## 📁 Struktur Folder
 ```
-bigdata-benchmark/
+meeting_test_bigdata/
 ├── node-service/
 ├── go-service/
 ├── python-service/
@@ -22,7 +22,7 @@ bigdata-benchmark/
 ## 🚀 Menjalankan dengan Docker
 1. Masuk ke direktori:
    ```bash
-   cd bigdata-benchmark
+   cd meeting_test_bigdata
    ```
 
 2. Jalankan semua service sekaligus:
