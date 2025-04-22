@@ -31,12 +31,14 @@ bigdata-benchmark/
    ```
 
 3. Akses endpoint masing-masing:
-| Backend | Port | URL |
-|---------|------|-----|
-| Node.js | 4000 | http://localhost:4000/test-bigdata |
-| Golang  | 4001 | http://localhost:4001/test-bigdata |
-| Python  | 4002 | http://localhost:4002/test-bigdata |
-| PHP     | 4003 | http://localhost:4003/index.php    |
+
+| Backend  | Port | URL                                     |
+|----------|------|-----------------------------------------|
+| Node.js  | 4000 | [http://localhost:4000/test-bigdata](http://localhost:4000/test-bigdata) |
+| Golang   | 4001 | [http://localhost:4001/test-bigdata](http://localhost:4001/test-bigdata) |
+| Python   | 4002 | [http://localhost:4002/test-bigdata](http://localhost:4002/test-bigdata) |
+| PHP      | 4003 | [http://localhost:4003/index.php](http://localhost:4003/index.php)       |
+
 
 ---
 
