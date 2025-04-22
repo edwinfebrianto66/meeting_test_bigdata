@@ -41,7 +41,7 @@ func testBigData(w http.ResponseWriter, r *http.Request) {
 
     for i, row := range records {
         if i == 0 {
-            continue // skip header
+            continue
         }
         age, _ := strconv.Atoi(row[2])
         salary, _ := strconv.Atoi(row[3])
@@ -51,7 +51,6 @@ func testBigData(w http.ResponseWriter, r *http.Request) {
     }
 
     elapsed := time.Since(start).Milliseconds()
-
     var m runtime.MemStats
     runtime.ReadMemStats(&m)
     memoryMB := float64(m.Alloc) / 1024.0 / 1024.0

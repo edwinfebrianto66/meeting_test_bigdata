@@ -8,7 +8,7 @@ Benchmark performa pengolahan dataset besar (1.000.000 baris CSV) menggunakan 4 
 
 ## 📁 Struktur Folder
 ```
-meeting_test_bigdata/
+bigdata-benchmark/
 ├── node-service/
 ├── go-service/
 ├── python-service/
@@ -17,20 +17,12 @@ meeting_test_bigdata/
 └── .gitignore
 ```
 
----
-
 ## 🚀 Menjalankan dengan Docker
-1. Masuk ke direktori:
-   ```bash
-   cd meeting_test_bigdata
-   ```
+```bash
+docker-compose up --build
+```
 
-2. Jalankan semua service sekaligus:
-   ```bash
-   docker-compose up --build
-   ```
-
-3. Akses endpoint masing-masing:
+### Endpoint:
 
 | Backend  | Port | URL                                     |
 |----------|------|-----------------------------------------|
@@ -39,41 +31,29 @@ meeting_test_bigdata/
 | Python   | 4002 | [http://localhost:4002/test-bigdata](http://localhost:4002/test-bigdata) |
 | PHP      | 4003 | [http://localhost:4003/index.php](http://localhost:4003/index.php)       |
 
+## ⚙️ Menjalankan Manual
 
----
-
-## ⚙️ Menjalankan Manual (Tanpa Docker)
-
-### Node.js (port 4000)
 ```bash
+# Node.js
 cd node-service
 npm install express csv-parser
 node index.js
-```
 
-### Python (port 4002)
-```bash
+# Python
 cd python-service
 pip install -r requirements.txt
 python app.py
-```
 
-### Golang (port 4001)
-```bash
+# Golang
 cd go-service
 go run main.go
-```
 
-### PHP (port 4003)
-```bash
+# PHP
 cd php-service
 php -S localhost:4003
 ```
 
----
-
-## 📊 Output Endpoint
-Contoh JSON hasil:
+## Output JSON
 ```json
 {
   "total_rows": 1000000,
@@ -84,9 +64,3 @@ Contoh JSON hasil:
   "cpu_percent": 18.5
 }
 ```
-
----
-
-## 🎯 Tujuan
-- Mengukur performa pengolahan file besar
-- Menentukan backend paling efisien dari sisi waktu dan resource (RAM, CPU)
