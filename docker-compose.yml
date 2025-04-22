@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  node-service:
+    build: ./node-service
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./node-service/data:/app/data
+
+  go-service:
+    build: ./go-service
+    ports:
+      - "4001:4001"
+    volumes:
+      - ./go-service/data:/app/data
+
+  python-service:
+    build: ./python-service
+    ports:
+      - "4002:4002"
+    volumes:
+      - ./python-service/data:/app/data
+
+  php-service:
+    build: ./php-service
+    ports:
+      - "4003:4003"
+    volumes:
+      - ./php-service/data:/app/data
